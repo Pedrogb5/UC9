@@ -1,0 +1,22 @@
+CREATE DATABASE Teste4
+GO
+
+USE Teste4
+GO
+
+CREATE TABLE Usuarios
+(
+
+	Email VARCHAR(100) UNIQUE NOT NULL,
+	Senha VARCHAR(30) NOT NULL
+
+)
+GO
+
+INSERT INTO Usuarios VALUES ('email@gmail.com' , 101212)
+GO
+
+SELECT * FROM Usuarios
+GO
+
+SELECT Email, HASHBYTES('MD2' , Senha) AS 'Senha' FROM Usuarios
